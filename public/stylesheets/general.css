@@ -1,0 +1,9 @@
+body{
+    background-color: lightgray;
+    margin: 0rem auto;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+*{
+    box-sizing: border-box;
+   }

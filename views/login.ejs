@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head')%>
+
+    <body>
+
+        <%- include('partials/header')%>
+
+            <main class="login-main">
+
+                <form action="/users/login" method="post">
+                    <label for="nombreUsuario"></label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de usuario" required>
+
+                    <label for="password"></label>
+                    <input type="password" id="password" name="password" placeholder="Elegí tu contraseña" required>
+
+                    <label for="recordame">
+                        Recordame<input type="checkbox" id="recordame" name="recordame"
+                            placeholder="Elegí tu contraseña">
+                    </label>
+
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+            </main>
+
+
+
+            <%- include('partials/footer')%>
+
+                <script src="../js/funcionalidades.js"></script>
+
+    </body>
+
+</html>

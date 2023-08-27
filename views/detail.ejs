@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+
+            <div class="detail">
+                <div class="detail-contenido">
+                    <h1>
+                        <%= producto.name %>
+                    </h1>
+                    <div class="detail-contenido-h3">
+                        <h3>
+                            <%= producto.description %>
+                        </h3>
+                    </div>
+
+                    <%if(producto.discount>0){%>
+
+
+
+                        <h3 class="precio-sin-descuento">$<%= producto.price %>
+                        </h3>
+
+                        <div class="precio-descuento">
+                            <p>
+                                $ <%= producto.price-(producto.discount * producto.price )/ 100 %>
+                                    <p>
+
+                                    <h4>
+                                        <%= producto.discount %> OFF%
+                                    </h4>
+                        </div>
+
+                        <% } %>
+
+                            <%if(producto.discount===null){%>
+
+                                <p>$<%= producto.price %>
+                                </p>
+                                <% } %>
+
+
+
+
+                                    <h3>
+                                        Cantidad = <%= producto.cantidad %>
+                                    </h3>
+
+                                    <button>Agregar al Carrito</button>
+                                    <button>Comprar</button>
+                </div>
+
+                <div class="detail-contenedor-imagen">
+                    <img class="img-principal" src="/images/products/<%= producto.images.mainImage %>"
+                        alt="<%= producto.name %>">
+                    <div class="detail-img-secundarias">
+                        <% producto.images.secondaryImages.forEach(imagen=> { %>
+                            <img src="/images/products/<%= imagen %>" alt="<%= imagen.name %>" class="img-secundaria">
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('partials/footer')%>
+                <script>
+                    const imgPrincipal = document.querySelector(".img-principal");
+                    const imgSecundarias = document.querySelectorAll(".img-secundaria");
+
+                    imgSecundarias.forEach(imgSecundaria => {
+                        imgSecundaria.addEventListener("mouseover", () => {
+                            const nuevaImagen = imgSecundaria.getAttribute("src");
+                            imgPrincipal.setAttribute("src", nuevaImagen);
+
+                            imgSecundarias.forEach(img => {
+                                img.classList.remove("seleccionada");
+                            });
+
+                            imgSecundaria.classList.add("seleccionada");
+                        });
+                    });
+                </script>
+
+
+
+
+
+
+
+    </body>
+
+</html>

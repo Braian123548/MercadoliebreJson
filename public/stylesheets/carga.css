@@ -1,0 +1,51 @@
+.cargar-contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cargar-contenedor form{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 5rem;
+    border-radius: 0.5rem;
+}
+
+.cargar-contenedor input[type="text"] , input[type="number"], textarea, select{
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: solid 2px black;
+}
+
+
+.cargar-contenedor button{
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #EAC926;
+    border: none;
+    margin: 1rem 0rem;
+}
+
+.cargar-contenedor button:hover{
+    background-color: #fce67a;
+}
+
+.modal-body img{
+height: 50%;
+width: 50%;
+margin: auto;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imagenes-secundarias img{width: 9vw;}
+
+.imagen-primaria img{
+    text-align: center;
+    width: 19vw;
+}

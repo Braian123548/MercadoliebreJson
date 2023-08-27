@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+
+            <div class="cargar-contenedor">
+                <h1>Editar Producto</h1>
+
+                <form method="POST" action="/products/editar/<%= producto._id %>?_method=PUT" enctype="multipart/form-data">
+                    <label for="name">Nombre del Producto:</label>
+                    <input type="text" id="name" name="name" value="<%= producto.name %>" required>
+                    <br>
+
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" name="description" rows="4" 
+                        required><%= producto.description %></textarea>
+                    <br>
+
+                    <label for="price">Precio:</label>
+                    <input type="number" id="price" name="price" value="<%= producto.price%>" required>
+                    <br>
+
+                    <div class="imagen-primaria">
+                        <label for="Image">Imágenes Primarias:</label>
+                        <img src="/images/products/<%= producto.images.mainImage %>" alt="">
+                    </div>
+                    <input type="file" id="Image" name="Image" accept="image/*" value="<%= producto.images.mainImage %> "
+                        multiple required>
+                    <br>
+
+
+                    <label for="secondaryImages">Imágenes Secundarias:</label>
+
+                    <div class="imagenes-secundarias">
+                        <% producto.images.secondaryImages.forEach(imagen=> {%>
+                            <img src="/images/products/<%= imagen%>" alt="">
+                            <% });%>
+                    </div>
+
+
+                    <input type="file" id="secondaryImages" name="secondaryImages" accept="image/*" required multiple max="5">
+                    <br>
+
+                    <label for="discount">Descuento (%):</label>
+                    <input type="number" id="discount" name="discount" min="0" value="<%= producto.discount %>"
+                        max="100">
+                    <br>
+
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" min="0" value="<%= producto.cantidad%>" max="100">
+                    <br>
+
+                    <button type="submit">Actualizar Producto</button>
+                </form>
+
+                <div class="cargar-contenedor">
+                    <button><a href="/products/vender">Cancelar</a></button>
+                </div>
+
+
+            </div>
+
+
+
+
+            <%- include('partials/footer')%>
+
+    </body>
+
+</html>

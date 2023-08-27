@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+
+            <% if (alertMessage) { %>
+                <script>
+                    window.onload = function () {
+                        var message = "<%= alertMessage %>";
+
+                        // Utiliza SweetAlert2 para mostrar la notificación
+                        Swal.fire({
+                            icon: 'warning', // Cambia el icono según tus preferencias
+                            title: 'Alerta',
+                            text: message,
+                        });
+                    };
+                </script>
+                <% } %>
+
+
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <div class="carousel-item">
+                                <img src="https://http2.mlstatic.com/D_NQ_849313-MLA70480253672_072023-OO.webp"
+                                    alt="Imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://http2.mlstatic.com/D_NQ_603773-MLA70481175520_072023-OO.webp"
+                                    alt="Imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://http2.mlstatic.com/D_NQ_944046-MLA70506793449_072023-OO.webp"
+                                    alt="Imagen 3">
+                            </div>
+                        </div>
+                        <div class="carousel-navigation">
+                            <button class="active"></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                    </div>
+
+
+
+                    <main class="home-main">
+
+
+                        <h3>Basado en tu última visita</h3>
+
+                        <div class="contenedor-tarjeta">
+                              
+                           
+                            <% productos.forEach(producto=> { %>
+
+                                <% if(producto.discount<=0){ %>
+                                    <div class="tarjeta">
+                                        <a href="/products/detalle/<%= producto._id%>">
+                                            <img height="300" src="images/products/<%= producto.images.mainImage%>"
+                                                alt="">
+                                            <div>
+                                                <i class="fas fa-truck" style="color: #009e3d;"></i>
+                                                <p>$<%=producto.price%>
+                                                </p>
+                                                
+                                            </div>
+                                            <h4>
+                                                <%= producto.name%>
+                                            </h4>
+                                           
+                                        </a>
+                                    </div>
+
+                                    <%}%>
+                                        <%});%>
+                        </div>
+
+
+
+
+                        <h3>Ofertas</h3>
+
+                        <div class="contenedor-tarjeta">
+
+
+                            <% productos.forEach(producto=> { %>
+                                <% if(producto.discount>0){ %>
+
+                                    <div class="tarjeta">
+                                        <a href="/products/detalle/<%= producto._id%>">
+                                            <img height="300" src="images/products/<%= producto.images.mainImage%>"
+                                                alt="">
+                                            <div class="producto-precio-home-contenedor">
+                                                <i class="fas fa-truck" style="color: #009e3d;"></i>
+                                                
+                                                <p class="producto-precio-home">$<%=producto.price%>
+                                                </p>
+
+                                                <h5>
+                                                    <%=producto.discount%>% OFF
+                                                </h5>
+                
+                                            </div>
+
+                                            <h6> $ <%= producto.price-(producto.discount * producto.price )/ 100 %></h6>
+
+                                            
+                                       
+                                            <h4>
+                                                <%=producto.name%>
+                                            </h4>
+                                           
+                                        </a>
+                                    </div>
+
+                                    <%}%>
+                                        <%});%>
+
+
+                        </div>
+                    </main>
+
+
+                    <%- include('partials/footer')%>
+
+
+                        <script src="../javascripts/funcionalidades.js"></script>
+
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+    </body>
+
+</html>

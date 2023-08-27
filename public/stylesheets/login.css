@@ -1,0 +1,31 @@
+.login-main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: 1rem 21rem; */
+}
+
+.login-main form input, .login-main form button{
+   width: 80%;
+   margin-top:2rem ;
+   padding: 0.8rem;
+   border: none;
+   border-radius: 0.5rem;
+}
+
+
+.login-main form input[type="text"] ,input[type="password"]:focus {
+    outline: none;
+    border-color: transparent;
+}
+
+
+.login-main form button{
+    background-color: #0945A3;
+    color: white;
+}
+
+.login-main form button:hover{
+    background-color:  #0022AA;
+
+}

@@ -1,0 +1,392 @@
+.detail-img-secundarias img{
+    width: 10vw;
+    margin: 0.5rem;
+    height: 10vh;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 2rem;
+    margin: 1rem;
+    flex-direction: column-reverse;
+}
+
+.detail-contenido h1{
+    font-size: 2rem;
+}
+
+.detail-contenido p{
+    font-size: 2.5rem;
+    margin: 0.5rem 0rem;
+}
+
+.detail-contenido h4{
+    font-size: 1.5rem;
+    color: green;
+    margin: 0.5rem 0rem;
+}
+
+.detail-contenido-h3{
+    max-width: 300px;
+   
+}
+
+.detail-contenido-h3 h3{
+    word-wrap: break-word;
+{
+    white-space: pre-line;
+};
+{
+    white-space: pre-line;
+};
+{
+    white-space: pre-line;
+};
+{
+    white-space: pre-line;
+};
+    white-space: pre-line;
+    font-size: 1rem;
+    line-height: 22.5px;
+}
+
+.detail-contenido button{
+    padding: 1rem;
+    background-color: #EAC926;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.detail-contenido button:hover{
+    background-color: #ffeb84;
+  
+}
+
+
+
+.detail-img-secundarias{
+    display: flex;
+    margin: auto;
+}
+
+
+
+.detail-contenedor-imagen{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.img-principal{
+    margin: 0.5rem;
+    height: 26vh;
+    width: auto;
+}
+
+.img-secundaria {
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 0.5rem;
+
+}
+
+.img-secundaria:hover {
+    opacity: 1; /* Cambia la opacidad cuando se hace hover */
+}
+
+
+
+.seleccionada {
+    border: 2px solid blue;
+}
+
+.precio-descuento{
+    
+display: flex;
+    
+align-items: center;
+    
+gap: 6px;
+}
+
+
+.precio-sin-descuento{
+    
+text-decoration: line-through;
+color: gray;
+}
+
+
+@media (width>480px) and (width<1024px) {
+    .detail-img-secundarias img{
+        width: 13vw;
+        margin: 0.5rem;
+        height: 17vh;
+    }
+    
+    .detail{
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        padding: 2rem;
+        margin: 1rem;
+        flex-direction: column-reverse;
+    }
+    
+    .detail-contenido h1{
+        font-size: 2rem;
+    }
+    
+    .detail-contenido p{
+        font-size: 2.5rem;
+        margin: 0.5rem 0rem;
+    }
+    
+    .detail-contenido h4{
+        font-size: 1.5rem;
+        color: green;
+        margin: 0.5rem 0rem;
+    }
+    
+    .detail-contenido-h3{
+        max-width: 300px;
+       
+    }
+    
+    .detail-contenido-h3 h3{
+        word-wrap: break-word;
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+        white-space: pre-line;
+        font-size: 1rem;
+        line-height: 22.5px;
+    }
+    
+    .detail-contenido button{
+        padding: 1rem;
+        background-color: #EAC926;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .detail-contenido button:hover{
+        background-color: #ffeb84;
+      
+    }
+    
+    
+    
+    .detail-img-secundarias{
+        display: flex;
+        margin: auto;
+    }
+    
+    
+    
+    .detail-contenedor-imagen{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 50px;
+        justify-content: center;
+        margin: auto;
+        align-items: center;
+    }
+    
+    .img-principal{
+        margin: 0.5rem;
+        height: 36vh;
+        width: auto;
+    }
+    
+    .img-secundaria {
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 0.5rem;
+    
+    }
+    
+    .img-secundaria:hover {
+        opacity: 1; /* Cambia la opacidad cuando se hace hover */
+    }
+    
+    
+    
+    .seleccionada {
+        border: 2px solid blue;
+    }
+    
+    .precio-descuento{
+        
+    display: flex;
+        
+    align-items: center;
+        
+    gap: 6px;
+    }
+    
+    
+    .precio-sin-descuento{
+        
+    text-decoration: line-through;
+    color: gray;
+    }
+    
+    
+}
+
+
+@media (width>1243px) {
+    .detail-img-secundarias img{
+        width: 8vw;
+        margin: 0.5rem;
+        height: 17vh;
+    }
+    
+    .detail{
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        padding: 2rem;
+        margin: 7rem;
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }
+    
+    .detail-contenido h1{
+        font-size: 2rem;
+    }
+    
+    .detail-contenido p{
+        font-size: 2.5rem;
+        margin: 0.5rem 0rem;
+    }
+    
+    .detail-contenido h4{
+        font-size: 1.5rem;
+        color: green;
+        margin: 0.5rem 0rem;
+    }
+    
+    .detail-contenido-h3{
+        max-width: 300px;
+       
+    }
+    
+    .detail-contenido-h3 h3{
+        word-wrap: break-word;
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+    {
+        white-space: pre-line;
+    };
+        white-space: pre-line;
+        font-size: 1rem;
+        line-height: 22.5px;
+    }
+    
+    .detail-contenido button{
+        padding: 1rem;
+        background-color: #EAC926;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .detail-contenido button:hover{
+        background-color: #ffeb84;
+      
+    }
+    
+    
+    
+    .detail-img-secundarias{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+    }
+    
+    
+    
+    .detail-contenedor-imagen{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 33px;
+        justify-content: center;
+        margin: 1px;
+        align-items: flex-start;
+    }
+    
+    .img-principal{
+        margin: -0.5rem;
+        height: 65vh;
+        width: 49vh;
+    }
+    
+    .img-secundaria {
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 0.5rem;
+    
+    }
+    
+    .img-secundaria:hover {
+        opacity: 1; /* Cambia la opacidad cuando se hace hover */
+    }
+    
+    
+    
+    .seleccionada {
+        border: 2px solid blue;
+    }
+    
+    .precio-descuento{
+        
+    display: flex;
+        
+    align-items: center;
+        
+    gap: 6px;
+    }
+    
+    
+    .precio-sin-descuento{
+        
+    text-decoration: line-through;
+    color: gray;
+    }
+    
+    
+}

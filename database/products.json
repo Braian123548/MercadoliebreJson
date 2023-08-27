@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "337890c5-7a68-403c-91f1-f9b9a442333f",
+    "name": "Casa",
+    "description": "sdasdas",
+    "price": "150",
+    "images": {
+      "mainImage": "1693106677640.png",
+      "secondaryImages": [
+        "1693106677642.png",
+        "1693106677643.png",
+        "1693106677645.png"
+      ]
+    },
+    "discount": "10",
+    "cantidad": "15",
+    "createdBy": "40dff5e2-33b7-46ea-9be1-94d76355ae87"
+  },
+  {
+    "_id": "29be6534-bc86-4e99-8654-a07074c7d9ff",
+    "name": "Casitoa",
+    "description": "asdasd",
+    "price": "150",
+    "images": {
+      "mainImage": "1693106701585.png",
+      "secondaryImages": [
+        "1693106701588.png",
+        "1693106701589.png",
+        "1693106701590.png"
+      ]
+    },
+    "discount": "5",
+    "cantidad": "10",
+    "createdBy": "40dff5e2-33b7-46ea-9be1-94d76355ae87"
+  },
+  {
+    "_id": "59d176c3-31c9-4a43-9b01-9dfbf6c495d8",
+    "name": "Prueba Eric",
+    "description": "adasd",
+    "price": "150",
+    "images": {
+      "mainImage": "1693106787741.png",
+      "secondaryImages": [
+        "1693106787742.png",
+        "1693106787743.png",
+        "1693106787746.png"
+      ]
+    },
+    "discount": "5",
+    "cantidad": "10",
+    "createdBy": "47bd7fbe-df73-4d30-aa5c-be9a53855417"
+  },
+  {
+    "_id": "ee8f1c70-2966-4db5-894a-a6341715e022",
+    "name": "Muñequito",
+    "description": "dasda",
+    "price": "150",
+    "images": {
+      "mainImage": "1693106869689.png",
+      "secondaryImages": [
+        "1693106869691.png",
+        "1693106869692.png",
+        "1693106869694.png"
+      ]
+    },
+    "discount": "50",
+    "cantidad": "5",
+    "createdBy": "40dff5e2-33b7-46ea-9be1-94d76355ae87"
+  },
+  {
+    "_id": "4bbfdbdb-b0bf-40d1-897e-b7b110390633",
+    "name": "muñequito 2",
+    "description": "asdadw",
+    "price": "150",
+    "images": {
+      "mainImage": "1693106913444.png",
+      "secondaryImages": [
+        "1693106913446.png",
+        "1693106913446.png",
+        "1693106913449.png"
+      ]
+    },
+    "discount": "",
+    "cantidad": "4",
+    "createdBy": "40dff5e2-33b7-46ea-9be1-94d76355ae87"
+  }
+]

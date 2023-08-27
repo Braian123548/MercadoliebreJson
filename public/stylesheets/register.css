@@ -1,0 +1,35 @@
+.register-main div{
+    display: flex;
+    flex-direction: column;
+}
+
+.register-main{
+    margin: 1rem 10%;
+}
+
+.register-main input[type="text"], input[type="email"], input[type="date"],input[type="password"] ,.register-main button{
+   
+    margin-top:1rem ;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.register-main form [type="text"], input[type="email"], input[type="date"],input[type="password"]  :focus {
+    outline: none;
+    border-color: transparent;
+}
+
+
+.register-main label{
+    margin-top: 1rem;
+}
+
+.register-main form button{
+    background-color: #0945A3;
+    color: white;
+}
+
+.register-main form button:hover{
+    background-color:  #0022AA;
+}

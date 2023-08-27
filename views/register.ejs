@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+            <main class="register-main">
+
+                <form action="/users/register" method="post" autocomplete="off">
+
+                    <div>
+                        <label for="nombreApellido"></label>
+                        <input type="text" id="nombreApellido" name="nombreApellido"
+                            placeholder="Ingrese su nombre y apellido" required>
+
+                        <label for="userName"></label>
+                        <input type="text" id="userName" name="userName" placeholder="Ingrese su nombre de usuario"
+                            required>
+
+
+                        <label for="password"></label>
+                        <input type="password" id="password" name="password" placeholder="Ingrese una contraseña"
+                            autocomplete="new-password" required>
+
+                        <% if (locals && locals.mensajeError) { %>
+                          <% for (let error in mensajeError) { %>
+                                <p style="color: red;"><%= mensajeError[error].msg%></p>
+                          <%};%>
+                       <% } %>
+
+                                <label for="emailUsuario"></label>
+                                <input type="email" id="emailUsuario" name="emailUsuario"
+                                    placeholder="Ingrese su dirección de email" required>
+
+
+                                <label for="fechaUsuario">Fecha de Nacimeiento</label>
+                                <input type="date" id="fechaUsuario" name="fechaUsuario" required>
+
+
+
+                                <label for="domicilioUsuario"></label>
+                                <input type="text" id="domicilioUsuario" name="domicilioUsuario"
+                                    placeholder="Ingrese su domicilio" required>
+                                <div>
+
+                                    <label for="perfil-usuario">Perfil del usuario</label>
+                                    <div>
+                                        <label for="perfil-comprador">
+                                            <input type="radio" name="perfil" value="comprador" id="perfil-comprador">
+                                            Comprador
+                                        </label>
+
+                                        <label for="perfil-vendedor">
+                                            <input type="radio" name="perfil" value="vendedor" id="perfil-vendedor">
+                                            Vendedor
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label>Intereses:</label>
+
+                                    <label for="interesElectro">
+                                        <input type="checkbox" name="interes" value="electro" id="interesElectro">
+                                        Electro
+                                    </label>
+
+                                    <label for="interesModa">
+                                        <input type="checkbox" name="interes" value="moda" id="interesModa">
+                                        Moda
+                                    </label>
+
+                                    <label for="interesHogar">
+                                        <input type="checkbox" name="interes" value="hogar" id="interesHogar">
+                                        Hogar
+                                    </label>
+
+                                    <label for="interesJugueteria">
+                                        <input type="checkbox" name="interes" value="jugueteria" id="interesJugueteria">
+                                        Juguetería
+                                    </label>
+
+                                    <label for="interesVidaSana">
+                                        <input type="checkbox" name="interes" value="vida sana" id="interesVidaSana">
+                                        Vida Sana
+                                    </label>
+
+                                </div>
+
+                                <button type="submit">Enviar</button>
+                </form>
+            </main>
+            <%- include('partials/footer')%>
+                <script src="../js/funcionalidades.js"></script>
+    </body>
+
+</html>

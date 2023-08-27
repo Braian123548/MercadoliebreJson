@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+
+
+            <main class="home-main">
+
+                <div class="contenedor-tarjeta">
+
+
+                    <% producto.forEach(product=> { %>
+
+                        <% if(product.discount===null){ %>
+
+                            <div class="tarjeta">
+                                <a href="/products/detalle/<%= product.id%>">
+                                    <img height="300" src="/images/products/<%= product.images.mainImage%>" alt="">
+                                    <div>
+                                        <i class="fas fa-truck" style="color: #009e3d;"></i>
+                                        <p>$<%=product.price%>
+                                        </p>
+                                        <h5>
+                                            <%=product.discount%>
+                                        </h5>
+                                    </div>
+                                    <h4>
+                                        <%=product.name%>
+                                    </h4>
+                                  
+                                </a>
+                            </div>
+
+                            <%}%>
+                                <%});%>
+                </div>
+
+
+                <div class="contenedor-tarjeta">
+
+
+                    <% producto.forEach(product=> { %>
+                        <% if(product.discount>0){ %>
+
+                            <div class="tarjeta">
+                                <a href="/products/detalle/<%= product.id%>">
+                                    <img height="300" src="/images/products/<%= product.images.mainImage%>" alt="">
+                                    <div>
+                                        <i class="fas fa-truck" style="color: #009e3d;"></i>
+                                        <p>$<%=product.price%>
+                                        </p>
+                                        <h5>
+                                            <%=product.discount%>% OFF
+                                        </h5>
+                                    </div>
+                                    <h4>
+                                        <%=product.name%>
+                                    </h4>
+                                  
+                                </a>
+                            </div>
+                            <%}%>
+                                <%});%>
+
+
+                </div>
+
+            </main>
+            <%- include('partials/footer')%>
+    </body>
+
+</html>

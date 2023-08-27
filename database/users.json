@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "40dff5e2-33b7-46ea-9be1-94d76355ae87",
+    "nombreApellido": "Braian",
+    "nombreUsuario": "Braian",
+    "password": "$2b$10$AIYcFnCd5RSleTsPDz3H5.ZOdcpBAQCdb5A00g7V7SqwwgHc6VKTO",
+    "email": "braian@braian",
+    "fechaNacimiento": "2023-08-25",
+    "perfil": "vendedor",
+    "domicilio": "sdsad",
+    "intereses": [
+      "electro",
+      "moda"
+    ]
+  },
+  {
+    "_id": "47bd7fbe-df73-4d30-aa5c-be9a53855417",
+    "nombreApellido": "Eric",
+    "nombreUsuario": "Eric",
+    "password": "$2b$10$S3AJdADg83w0KJQsdYucAu4VLH3Ni0ABrwLKHgq0G18uco4oH4ZwK",
+    "email": "Eric@Eric",
+    "fechaNacimiento": "2023-08-07",
+    "perfil": "vendedor",
+    "domicilio": "ASDAW",
+    "intereses": [
+      "electro",
+      "moda"
+    ]
+  }
+]
